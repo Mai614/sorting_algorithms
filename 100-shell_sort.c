@@ -2,6 +2,19 @@
 
 
 /**
+ * swap - Swap the positions of two elements in an array.
+ * @array: The array.
+ * @item1: Index of the first element.
+ * @item2: Index of the second element.
+ */
+void swap(int *array, int item1, int item2)
+{
+	int tmp = array[item1];
+	array[item1] = array[item2];
+	array[item2] = tmp;
+}
+
+/**
  * shell_sort - Sorts an array of integers in ascending order
  *              using the Shell sort algorithm with the Knuth sequence.
  * @array: The array to be sorted.
