@@ -1,6 +1,5 @@
 #include "sort.h"
 #include <stdio.h>
-
 /**
  * swap - utility function to swap to integers
  * @a: integer a
@@ -23,6 +22,7 @@ void swap(int *a, int *b)
  * @idx: index
  * @n: size of the array to run
  */
+
 void maxHeapify(int *array, size_t size, int idx, size_t n)
 {
 	int largest = idx;		 /* Initialize largest as root*/

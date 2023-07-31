@@ -2,19 +2,6 @@
 
 
 /**
- * swap - Swap the positions of two elements in an array.
- * @array: The array.
- * @item1: Index of the first element.
- * @item2: Index of the second element.
- */
-void swap(int *array, int item1, int item2)
-{
-	int tmp = array[item1];
-	array[item1] = array[item2];
-	array[item2] = tmp;
-}
-
-/**
  * shell_sort - Sorts an array of integers in ascending order
  *              using the Shell sort algorithm with the Knuth sequence.
  * @array: The array to be sorted.
@@ -29,7 +16,7 @@ void shell_sort(int *array, size_t size)
 
 	/* Calculate the initial gap using the Knuth sequence */
 	while (gap < size / 3)
-		gap = 3 * gap + 1;
+		gap = gap * 3 + 1;
 
 	/* Start Shell sort with decreasing gaps */
 	while (gap >= 1)
@@ -48,7 +35,7 @@ void shell_sort(int *array, size_t size)
 		}
 
 		/* Reduce the gap for the next iteration */
-		gap /= 3;
+		gap = (gap - 1) / 3;
 
 		/* Print the current state of the array */
 		print_array(array, size);
